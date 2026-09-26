@@ -1,17 +1,12 @@
 -- ============================================================
 -- JFORCE SOLUTIONS - HOSPITAL MANAGEMENT SYSTEM
--- File: procedures.sql
--- Database: hospital_management
--- MySQL 8.x
--- ============================================================
 
 USE hospital_management;
 
 DELIMITER $$
 
--- ============================================================
 -- PROCEDURE 1: RegisterPatient
--- ============================================================
+    
 DROP PROCEDURE IF EXISTS RegisterPatient$$
 
 CREATE PROCEDURE RegisterPatient(
@@ -116,10 +111,9 @@ BEGIN
 END$$
 
 
--- ============================================================
+
 -- PROCEDURE 3: BookAppointment
--- ============================================================
-DROP PROCEDURE IF EXISTS BookAppointment$$
+
 
 CREATE PROCEDURE BookAppointment(
     IN p_patient_id INT,
@@ -210,9 +204,9 @@ BEGIN
 END$$
 
 
--- ============================================================
+
 -- PROCEDURE 4: CompleteAppointment
--- ============================================================
+
 DROP PROCEDURE IF EXISTS CompleteAppointment$$
 
 CREATE PROCEDURE CompleteAppointment(
@@ -311,9 +305,9 @@ BEGIN
 END$$
 
 
--- ============================================================
+
 -- PROCEDURE 5: GetPatientHistory
--- ============================================================
+
 DROP PROCEDURE IF EXISTS GetPatientHistory$$
 
 CREATE PROCEDURE GetPatientHistory(
@@ -355,9 +349,8 @@ BEGIN
 END$$
 
 
--- ============================================================
 -- PROCEDURE 6: GetDoctorPerformanceReport
--- ============================================================
+
 DROP PROCEDURE IF EXISTS GetDoctorPerformanceReport$$
 
 CREATE PROCEDURE GetDoctorPerformanceReport(
@@ -422,9 +415,8 @@ BEGIN
 END$$
 
 
--- ============================================================
 -- BONUS: GenerateMonthlyHospitalReport
--- ============================================================
+
 DROP PROCEDURE IF EXISTS GenerateMonthlyHospitalReport$$
 
 CREATE PROCEDURE GenerateMonthlyHospitalReport(
@@ -489,37 +481,3 @@ END$$
 
 DELIMITER ;
 
--- ============================================================
--- TEST COMMANDS
--- ============================================================
-
--- Procedure 1
--- CALL RegisterPatient(
---     'Rahul Mehta',
---     '1998-05-12',
---     'Male',
---     '9876543210',
---     'B+'
--- );
-
--- Procedure 2
--- CALL GetDoctorAvailability('Cardiology', '2026-09-10');
-
--- Procedure 3
--- CALL BookAppointment(9, 1, '2026-09-20', '10:30:00');
-
--- Procedure 4
--- CALL CompleteAppointment(9, 750.00, 250.00);
-
--- Procedure 5
--- CALL GetPatientHistory(1);
-
--- Procedure 6
--- CALL GetDoctorPerformanceReport(
---     1,
---     '2026-09-01',
---     '2026-09-30'
--- );
-
--- Bonus
--- CALL GenerateMonthlyHospitalReport(9, 2026);
