@@ -1,16 +1,10 @@
--- ============================================================
--- JFORCE SOLUTIONS - HOSPITAL MANAGEMENT SYSTEM
--- File: database.sql
--- Database: MySQL 8.x
--- ============================================================
-
+-- JFORCE SOLUTIONS - HOSPITAL MANAGEMENT SYSTEM--
 DROP DATABASE IF EXISTS hospital_management;
 CREATE DATABASE hospital_management;
 USE hospital_management;
 
--- ============================================================
--- 1. PATIENTS
--- ============================================================
+-- 1. PATIENTS--
+
 CREATE TABLE patients (
     patient_id INT PRIMARY KEY AUTO_INCREMENT,
     patient_name VARCHAR(100) NOT NULL,
@@ -28,9 +22,8 @@ CREATE TABLE patients (
         CHECK (blood_group IN ('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'))
 );
 
--- ============================================================
--- 2. DOCTORS
--- ============================================================
+
+-- 2. DOCTORS--
 CREATE TABLE doctors (
     doctor_id INT PRIMARY KEY AUTO_INCREMENT,
     doctor_name VARCHAR(100) NOT NULL,
@@ -42,9 +35,9 @@ CREATE TABLE doctors (
     CONSTRAINT chk_doctor_status CHECK (status IN ('Active', 'Inactive'))
 );
 
--- ============================================================
--- 3. APPOINTMENTS
--- ============================================================
+
+-- 3. APPOINTMENTS--
+
 CREATE TABLE appointments (
     appointment_id INT PRIMARY KEY AUTO_INCREMENT,
     patient_id INT NOT NULL,
@@ -67,9 +60,9 @@ CREATE TABLE appointments (
         UNIQUE (doctor_id, appointment_date, appointment_time)
 );
 
--- ============================================================
+
 -- 4. BILLS
--- ============================================================
+
 CREATE TABLE bills (
     bill_id INT PRIMARY KEY AUTO_INCREMENT,
     patient_id INT NOT NULL,
@@ -93,10 +86,6 @@ CREATE TABLE bills (
     CONSTRAINT chk_bill_payment_status
         CHECK (payment_status IN ('Paid', 'Pending'))
 );
-
--- ============================================================
--- SAMPLE DATA
--- ============================================================
 
 -- 10 PATIENTS
 INSERT INTO patients
