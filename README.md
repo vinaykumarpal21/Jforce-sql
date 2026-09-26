@@ -1,10 +1,4 @@
-# Hospital Management System – SQL Developer Interview Task
-
-**Company:** JFORCE SOLUTIONS  
-**Role:** SQL Developer – Stored Procedure  
-**Level:** Junior / R1  
-**Database:** MySQL 8.x
-
+# Hospital Management System – SQL Developer Inter
 ## 1. Project Overview
 
 This project implements a small Hospital Management System using MySQL.
@@ -374,29 +368,9 @@ DOCTORS
    |
    |-------------------<
         APPOINTMENTS
-```
 
-More specifically:
 
-```text
-patients.patient_id
-        |
-        +---- appointments.patient_id
-
-doctors.doctor_id
-        |
-        +---- appointments.doctor_id
-
-appointments.appointment_id
-        |
-        +---- bills.appointment_id
-
-patients.patient_id
-        |
-        +---- bills.patient_id
-```
-
-## 10. Recommended Demo Flow
+ 10. Recommended Demo Flow
 
 For a 2–5 minute interview demo, show the following:
 
@@ -518,26 +492,12 @@ Before submitting, verify:
 - [x] 5+ doctors
 - [x] 15+ appointments
 - [x] 10+ bills
-- [x] Six required procedures
-- [x] Bonus procedure
-- [x] Primary keys
-- [x] Foreign keys
-- [x] Validation
-- [x] Duplicate phone prevention
-- [x] Duplicate appointment-slot prevention
-- [x] Transaction handling
-- [x] JOINs
-- [x] Aggregate functions
-- [x] Error handling
-- [x] Demo execution commands
 
 ## 13. Submission
 
 Submit:
 
 1. GitHub repository link
-2. 2–5 minute demo video
-
 The assignment specifies submission to:
 
 `careers@jforcesolutions.com`
